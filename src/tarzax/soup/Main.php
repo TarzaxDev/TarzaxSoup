@@ -17,7 +17,7 @@ class Main extends PluginBase implements Listener{
         $this->getResource("config.yml");
     }
 
-    public function soup(PlayerItemUseEvent $event)
+    public function soup(PlayerItemUseEvent $event, $sender)
     {
         $player = $event->getPlayer();
         if ($player->getInventory()->getItemInHand()->getId() == $this->getConfig()->get("SoupID")) {
@@ -28,6 +28,7 @@ class Main extends PluginBase implements Listener{
                 $item->setCount("1");
                 $player->setHealth($player->getHealth() + $this->getConfig()->get("SoupHEALTH"));
                 $player->getInventory()->removeItem($item);
+                $sender->sendPopup($this->getConfig()->get("PopupMessage"));
             }
         }
     }
