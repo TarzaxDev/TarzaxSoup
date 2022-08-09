@@ -4,6 +4,7 @@ namespace tarzax\soup;
 
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerItemUseEvent;
+use pocketmine\item\ItemFactory;
 use pocketmine\plugin\PluginBase;
 
 class Main extends PluginBase implements Listener{
@@ -17,7 +18,7 @@ class Main extends PluginBase implements Listener{
         $this->getResource("config.yml");
     }
 
-    public function soup(PlayerItemUseEvent $event)
+    public function OnInteract(PlayerItemUseEvent $event)
     {
         $player = $event->getPlayer();
         if ($player->getInventory()->getItemInHand()->getId() == $this->getConfig()->get("SoupID")) {
@@ -27,7 +28,8 @@ class Main extends PluginBase implements Listener{
                 $item = $event->getItem();
                 $item->setCount("1");
                 $player->setHealth($player->getHealth() + $this->getConfig()->get("SoupHEALTH"));
-                $player->getInventory()->removeItem($item);
+                $player->getInventory()->setItemInHand(ItemFactory::getInstance()->get($item->getId(), 0, $item->getCount() -1));
+                $player->sendPopup($this->getConfig()->get("PopupUse"));
             }
         }
     }
