@@ -1,6 +1,6 @@
 # TarzaxSoup config
-# v1.0.1
+# v1.0.2
 
-SoupID: 436
+SoupID: 459
 SoupHEALTH: 2
-PopupUse: "Soup is use"
+PopupUse: "§a- The soup was well used ! -"
