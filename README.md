@@ -1,8 +1,13 @@
 # TarzaxSoup
 
-Soup pvp by tarzax
+- My discord is _Tarzax_#6706
+- ![icon](https://user-images.githubusercontent.com/98848694/184554620-93bd5eed-a583-4e1f-b753-694abbc06355.png)
 
-![icon](https://user-images.githubusercontent.com/98848694/183455601-bd1fcfa4-4f92-439f-bed8-2bfb988610d8.png)
 
+## Features
 
-[![](https://poggit.pmmp.io/shield.state/TarzaxSoup)](https://poggit.pmmp.io/p/TarzaxSoup)
+- All messages are configurable
+- Configurable Soup item and soup heal
+
+## Credits
+- [TarzaxDev](https://github.com/TarzaxDev)
