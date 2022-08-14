@@ -6,4 +6,3 @@ Soup pvp by tarzax
 
 
 [![](https://poggit.pmmp.io/shield.state/TarzaxSoup)](https://poggit.pmmp.io/p/TarzaxSoup)
-<a href="https://poggit.pmmp.io/p/TarzaxSoup"><img src="https://poggit.pmmp.io/shield.state/TarzaxSoup"></a>
