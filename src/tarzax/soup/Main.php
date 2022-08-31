@@ -26,7 +26,6 @@ class Main extends PluginBase implements Listener{
                 $event->cancel();
             } else {
                 $item = $event->getItem();
-                $item->setCount("1");
                 $player->setHealth($player->getHealth() + $this->getConfig()->get("SoupHEALTH"));
                 $player->getInventory()->setItemInHand(ItemFactory::getInstance()->get($item->getId(), 0, $item->getCount() -1));
                 $player->sendPopup($this->getConfig()->get("PopupUse"));
